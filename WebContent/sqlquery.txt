@@ -1,0 +1,47 @@
+create database Expence;
+
+create table user(id int NOT NULL AUTO_INCREMENT,name varchar(20),email varchar(40),pass varchar(20),tables varchar(30),image varchar(50), primary key(id),UNIQUE (email));
+
+mysql> desc user;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(20) | YES  |     | NULL    |                |
+| email  | varchar(40) | YES  | UNI | NULL    |                |
+| pass   | varchar(20) | YES  |     | NULL    |                |
+| tables | varchar(30) | YES  |     | NULL    |                |
+| image  | varchar(50) | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+
+update user set  email="admin@gmail.com" where name="admin"; 
+
+insert into user values("admin","admin@hmail.com","admin"); 
+
+select * from user;
+ALTER TABLE user ADD image varchar(50);
+
+
+CREATE TABLE product (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(30) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (Personid)
+); 
+
+
+
+create table user(id int NOT NULL AUTO_INCREMENT,name varchar(20),price float,cate varchar(20),date varchar(30),qunty int, primary key(id));
+
+desc admin1;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(20) | YES  |     | NULL    |                |
+| price | float       | YES  |     | NULL    |                |
+| cate  | varchar(20) | YES  |     | NULL    |                |
+| date  | varchar(30) | YES  |     | NULL    |                |
+| qunty | int(11)     | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
